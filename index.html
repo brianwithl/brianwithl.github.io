@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桂林旅游攻略提供桂林山水精华路线规划、漓江游船指南、阳朔西街住宿推荐、龙脊梯田最佳游览时间及本地美食攻略。包含实用交通信息与避坑建议。">
+    <meta name="keywords" content="桂林旅游攻略,漓江游船,阳朔住宿,龙脊梯田,桂林美食,桂林山水">
+    <title>桂林旅游攻略-漓江山水与阳朔住宿指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c7a4b;
+            --secondary-color: #2d3748;
+            --accent-color: #e53e3e;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-main: #1a202c;
+            --text-sub: #718096;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #234e36;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/guilinriver/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 0 20px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* 核心亮点 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* 路线规划 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-sub);
+        }
+
+        .route-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .route-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .route-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .route-content {
+            padding: 25px;
+        }
+
+        .route-tag {
+            display: inline-block;
+            background-color: #e6fffa;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .route-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .route-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+        }
+
+        .route-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .route-desc {
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .route-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 深度攻略区 */
+        .guide-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+        }
+
+        .guide-article h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-article h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--secondary-color);
+        }
+
+        .guide-article p {
+            margin-bottom: 15px;
+            color: var(--text-sub);
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-sub);
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .tips-sidebar {
+            background-color: #f0fff4;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #c6f6d5;
+        }
+
+        .tips-sidebar h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .tip-item {
+            margin-bottom: 20px;
+        }
+
+        .tip-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            display: none;
+            border-top: 1px solid #edf2f7;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #a0aec0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #4a5568;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .route-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 移动端简化隐藏菜单 */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .route-container {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-bar {
+                flex-direction: column;
+                padding: 10px;
+                border-radius: 12px;
+            }
+            .search-bar input {
+                margin-bottom: 10px;
+            }
+            .search-bar button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                桂林攻略
+            </a>
+            <nav class="nav-links">
+                <a href="#routes">精华路线</a>
+                <a href="#guide">游玩指南</a>
+                <a href="#tips">避坑贴士</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#" class="cta-btn">预订行程</a>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>探索桂林山水甲天下</h1>
+            <p>从漓江竹筏到阳朔西街，为您提供最实用的桂林旅游攻略、住宿推荐与美食指南。</p>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索目的地（如：阳朔、龙脊、象鼻山）...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 核心亮点 -->
+        <section class="features">
+            <article class="feature-card">
+                <div class="feature-icon">🌊</div>
+                <h3>漓江游船</h3>
+                <p>体验“船在江中走，人在画中游”的绝美意境。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🌄</div>
+                <h3>龙脊梯田</h3>
+                <p>观赏世界级农耕奇观，四季景色各有千秋。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🏞️</div>
+                <h3>阳朔风光</h3>
+                <p>骑行十里画廊，感受喀斯特地貌的无限魅力。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🍜</div>
+                <h3>桂林米粉</h3>
+                <p>必尝地道特色美食，开启您的味蕾之旅。</p>
+            </article>
+        </section>
+
+        <!-- 精华路线推荐 -->
+        <section id="routes">
+            <div class="section-title">
+                <h2>热门游玩路线</h2>
+                <p>根据不同游玩天数与兴趣偏好，为您推荐最合理的行程安排</p>
+            </div>
+            <div class="route-container">
+                <!-- 路线 1 -->
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/lijiangboat/600/400.jpg" alt="漓江游船路线" class="route-img">
+                    <div class="route-content">
+                        <span class="route-tag">经典必玩</span>
+                        <h3>桂林-阳朔精华2日游</h3>
+                        <div class="route-meta">
+                            <span>📅 2天1晚</span>
+                            <span>⭐ 4.9分</span>
+                        </div>
+                        <p class="route-desc">第一天游览象鼻山、两江四湖，第二天乘坐四星游船前往阳朔，体验漓江风光，晚上观看印象刘三姐。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 路线 2 -->
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/longji/600/400.jpg" alt="龙脊梯田路线" class="route-img">
+                    <div class="route-content">
+                        <span class="route-tag">自然风光</span>
+                        <h3>龙脊梯田摄影3日游</h3>
+                        <div class="route-meta">
+                            <span>📅 3天2晚</span>
+                            <span>⭐ 4.8分</span>
+                        </div>
+                        <p class="route-desc">深入金坑大寨梯田，拍摄云海日出，体验壮族瑶族风情，适合摄影爱好者与徒步旅行者。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 路线 3 -->
+                <article class="route-card">
+                    <img src="https://picsum.photos/seed/yangshuo/600/400.jpg" alt="阳朔休闲路线" class="route-img">
+                    <div class="route-content">
+                        <span class="route-tag">休闲度假</span>
+                        <h3>阳朔自由行深度游</h3>
+                        <div class="route-meta">
+                            <span>📅 4天3晚</span>
+                            <span>⭐ 4.7分</span>
+                        </div>
+                        <p class="route-desc">在遇龙河乘坐竹筏，骑行十里画廊，探索西街夜生活，体验最惬意的慢节奏旅行。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 深度攻略内容 -->
+        <section id="guide" class="guide-section">
+            <div class="container guide-grid">
+                <div class="guide-article">
+                    <h2>桂林旅游实用指南</h2>
+                    <p>桂林以其独特的喀斯特地貌闻名于世，是国内外游客向往的旅游胜地。为了让您的旅程更加顺利，我们整理了以下关键信息。</p>
+                    
+                    <h3>最佳旅行时间</h3>
+                    <p>桂林属于亚热带季风气候，四季分明。每年<strong>4月至10月</strong>是最佳旅游季节。其中4-5月烟雨朦胧，漓江景色最为迷人；9-10月秋高气爽，适合户外徒步。</p>
+
+                    <h3>交通指南</h3>
+                    <p><strong>抵达桂林：</strong>桂林两江国际机场有直飞国内主要城市的航班，也有直达香港、澳门的航线。桂林北站和西站是高铁枢纽。</p>
+                    <p><strong>市内交通：</strong>桂林市区不大，景点相对集中。打车、网约车非常方便。前往阳朔建议选择高铁（仅需1小时）或大巴（3小时）。</p>
+
+                    <h3>住宿建议</h3>
+                    <p>如果您想方便游览市区景点，建议住在两江四湖附近；如果您喜欢热闹和夜景，阳朔西街是首选；追求安静的度假体验，则推荐遇龙河边的民宿。</p>
+                </div>
+
+                <aside class="tips-sidebar">
+                    <h3>⚠️ 避坑与贴士</h3>
+                    <div class="tip-item">
+                        <strong>关于游船</strong>
+                        <p>漓江游船分为四星和五星级，价格差异主要在于餐饮和导游服务，建议提前网上预订，避免现场排队。</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>关于特产</strong>
+                        <p>购买桂林米粉、罗汉果等特产时，请前往正规超市或大型市场，路边摊价格虚高且品质难控。</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>关于天气</strong>
+                        <p>桂林天气多变，建议随身携带雨具，并准备一件薄外套，早晚温差较大。</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">桂林旅游需要几天？</div>
+                <div class="faq-answer">一般建议安排3-4天。2天可以走完桂林市区和阳朔的精华路线，4天可以深度游览龙脊梯田或周边景点。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">漓江竹筏和游船哪个好？</div>
+                <div class="faq-answer">竹筏（遇龙河）体验更悠闲，适合近距离接触水面，但速度慢；游船（漓江）视野更开阔，设施更好，适合长途观光。两者各有千秋，建议组合体验。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">在桂林吃饭贵吗？</div>
+                <div class="faq-answer">桂林的餐饮价格适中。一碗正宗的桂林米粉通常在10-15元人民币，特色菜如啤酒鱼人均消费约80-120元。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">需要带多少钱？</div>
+                <div class="faq-answer">根据行程安排，每日预算建议在300-500元（不含住宿）。建议备足现金，部分偏远乡村或民宿可能无法刷卡。</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>桂林攻略</h4>
+                    <p style="opacity: 0.8; font-size: 0.9rem;">专注为旅行者提供最真实、最实用的桂林及周边旅游信息，让您的山水之旅无忧无虑。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门景点</h4>
+                    <ul>
+                        <li><a href="#">象鼻山</a></li>
+                        <li><a href="#">漓江风景区</a></li>
+                        <li><a href="#">阳朔西街</a></li>
+                        <li><a href="#">龙脊梯田</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游玩指南</h4>
+                    <ul>
+                        <li><a href="#">交通攻略</a></li>
+                        <li><a href="#">美食推荐</a></li>
+                        <li><a href="#">酒店预订</a></li>
+                        <li><a href="#">特产购物</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱: contact@guilin-guide.com</li>
+                        <li>电话: 0773-1234567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 桂林旅游攻略网. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+  </html>
